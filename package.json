@@ -11,10 +11,9 @@
   },
   "scripts": {
     "start": "concurrently \"cd my-project && npm run dev\" \"node server/server.js\"",
-    "dev:vite": "vite",
-    "dev:server": "node server/server.js",
-    "build": "cd server && npm install ",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "npm run client && npm run server",
+    "server": "cd server && npm install",
+    "client": "cd my-project && npm run build && npm install",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   }
 }
