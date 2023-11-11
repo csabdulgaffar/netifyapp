@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://root:root@cluster0.mbr3hwy.mongodb.net/");
+mongoose.connect("mongodb+srv://root:root@cluster0.mbr3hwy.mongodb.net");
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
@@ -24,5 +24,5 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.use("/api/todos", todoRoutes);
 
 // Server Setup
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = 3000;
+app.listen(PORT, () => console.log(`Server running on port 3000`));
