@@ -13,7 +13,7 @@
     "start": "npm run server-run && npm run client-run  ",
     "client-run": "cd my-project && npm run dev",
     "server-run": "node server/server.js",
-    "build": "npm run client && npm run server",
+    "build": "npm run server && npm run client ",
     "server": "cd server && npm install",
     "client": "cd my-project && npm install &&npm run build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
